@@ -1,26 +1,25 @@
 const mongoose = require("./connection.js");
-const Food = require("../models/Food.js");
 const Shop = require("../models/Shop.js");
 
-const pizza = new Food({
+const pizza = {
   name: "Fellini's Special",
   price: "5.99"
-});
+};
 
-const injera = new Food({
+const injera = {
   name: "Injera",
   price: "1.00"
-});
+};
 
-const fishTaco = new Food({
+const fishTaco = {
   name: "Fish Taco",
   price: "2.85"
-});
+};
 
-const padThai = new Food({
+const padThai = {
   name: "Pad Thai",
   price: "9.00"
-});
+};
 
 const fellinis = new Shop({
   name: "Fellini's Pizza",
@@ -67,9 +66,7 @@ const desta = new Shop({
 });
 
 Shop.remove({})
-  .then(() => Food.remove({}))
   .then(() => Shop.create([taq, fellinis, desta, littleBangcock]))
-  .then(() => Food.insertMany([pizza, injera, padThai, fishTaco]))
   .then(() => {
     console.log("seeded successfully");
     mongoose.connection.close();

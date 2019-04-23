@@ -1,0 +1,21 @@
+<div class="container">
+   <h2 class="text-center">{{shop.name}}</h2>
+   <div class="text-center">
+       <img class="shop-img-banner" src={{shop.imgLink}} alt="">
+   </div>
+   <div class="text-center">
+       <a class="action-btn btn btn-info" href="/{{shop.id}}/edit">EDIT</a>
+       <form class="delete-form"action="/{{shop.id}}?_method=DELETE" method="POST">
+           <input class="action-btn btn btn-danger" type="submit" value="DELETE">
+       </form>
+   </div>
+   <p>{{shop.description}}</p>
+
+   <h3 class="text-center">Food</h3>
+   <ul>
+       {{#each shop.foodItems}}
+           <a href="/{{../shop._id}}/food/{{id}}">{{name}} - ${{price}}</a>
+       {{/each}}
+   </ul>
+   </div>
+</div>

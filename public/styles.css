@@ -10,6 +10,10 @@ h1 {
     color: #fff;
 }
 
+input, textarea {
+    border: 3px solid black;
+}
+
 .review {
     border: 1px solid #7e7e7e;
     padding: 20px;

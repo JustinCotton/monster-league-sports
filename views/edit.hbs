@@ -1,0 +1,25 @@
+<form action="/{{shop.id}}?_method=PUT" method="POST">
+    <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" value="{{shop.name}}">
+    </div>
+    <div>
+        <label for="rating">Rating</label>
+        <input type="number" min="1" max="5" name="rating" id="rating" value={{shop.rating}}>
+    </div>
+    <div>
+        <label for="category">Category</label>
+        <input type="text" name="category" id="category" value={{shop.category}}>
+    </div>
+    <div>
+        <label for="description">Description</label>
+        <textarea name="description" id="description" cols="30" rows="10">
+            {{shop.description}}
+        </textarea>
+    </div>
+    <div>
+        <label for="imgLink">Image Link</label>
+        <input type="text" name="imgLink" id="imgLink" value="{{shop.imgLink}}">
+    </div>
+    <input type="submit" value="Submit">
+</form>
