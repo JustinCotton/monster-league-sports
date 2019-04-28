@@ -1,26 +1,36 @@
-const express = require('express')
-const app = express()
-const methodOverride = require('method-override')
-const logger = require('morgan')
-const routes = require('./routes/index.js')
-const apiRoutes = require('./routes/api.js')
+const playerApi = require("./api/playerApi.js");
 
-// Register middleware
-app.use(express.json())
-app.use(express.urlencoded({extended: true}))
-app.use(methodOverride('_method'))
+const express = require("express");
+const app = express();
 
-app.use(logger('dev'))
+app.set("view engine", "hbs");
 
-app.use(express.static(__dirname + '/public'))
+app.use(express.urlencoded());
 
-app.set('view engine', 'hbs')
+app.get("/", (req, res) => {
+    // res.send("Hello, World!");
+    playerApi.getAllPlayers()
+        .then(players => {
+            // res.send(players);
+            res.render("players", {players});
+        });
+});
 
-app.use('/', routes)
-app.use('/api/v1', apiRoutes)
-
-const PORT = process.env.PORT || 3000 
-
-app.listen(PORT, () => {
-    console.log(`App is listening on PORT ${PORT}`)
+app.get("/:playerId", (req, res) => {
+    playerApi.getPlayerById(req.params.playerId)
+        .then(player => {
+            res.render("player", {player});
+        });
 })
+
+app.post("/", (req,res) => {
+    playerApi.createPlayer(req.body)
+        .then(() => {
+            res.render("players");
+        });
+})
+
+const PORT = 3000;
+app.listen(PORT, () => {
+    console.log("Connected at: " + PORT);
+});

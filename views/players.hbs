@@ -1,0 +1,26 @@
+<h1>Players</h1>
+<ul>
+    {{#each players}}
+        <li>
+            <a href="/players/{{_id}}">
+            {{playerName}}
+            </a>
+        </li>
+    {{/each}}
+</ul>
+
+<form method="POST" action="/">
+    <input type="text" name="playerName" placeholder="Name" />
+    <input type="text" name="playerPhoto" placeholder="Photo URL" />
+    <input type="text" name="position" placeholder="Position" />
+    <input type="text" name="hits" placeholder="Hits" />
+    <input type="text" name="average" placeholder="Average" />
+    <input type="text" name="rbi" placeholder="RBIs" />
+    <input type="text" name="hr" placeholder="HRs" />
+    <input type="text" name="steals" placeholder="Steals" />
+    <input type="text" name="errors" placeholder="Errors" />
+    <input type="checkbox" name="allStar" placeholder="" />
+    <input type="text" name="cityName" placeholder="City Name" />
+    <input type="text" name="teamName" placeholder="Team Name" />
+    <input type="submit" value="Create New Player" />
+</form>
