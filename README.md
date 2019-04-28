@@ -1,4 +1,4 @@
-# Monster League Sports Project
+# Monster League Sports
 ## Overview
 
 
@@ -9,7 +9,7 @@
 
   * Languages: nodeJS, Express, Handlebars
   * Design: Google Fonts
-  * Project Planning & User Stories: [Trello](https://trello.com/b/mpoAg0Q5/sei21-sports-fanatic)
+  * Project Planning & User Stories: [Trello](https://trello.com/b/mpoAg0Q5/sei21-monser-league-sports)
   * Visual Studio Code
   * Git, Github, MongoDB, MongoDB Compass, Postman, Heroku
 
