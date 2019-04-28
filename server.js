@@ -10,7 +10,14 @@ app.use(express.static(__dirname + '/public'))
 app.use(express.urlencoded());
 
 app.get("/", (req, res) => {
-    // res.send("Hello, World!");
+    playerApi.getAllPlayers()
+        .then(players => {
+            // res.send(players);
+            res.render("index", {players});
+        });
+});
+
+app.get("/players", (req, res) => {
     playerApi.getAllPlayers()
         .then(players => {
             // res.send(players);
@@ -18,17 +25,17 @@ app.get("/", (req, res) => {
         });
 });
 
-app.get("/:playerId", (req, res) => {
+app.get("/players/:playerId", (req, res) => {
     playerApi.getPlayerById(req.params.playerId)
         .then(player => {
-            res.render("player", {player});
+            // res.render("player", {player});
         });
 })
 
-app.post("/", (req,res) => {
+app.post("/players", (req,res) => {
     playerApi.createPlayer(req.body)
         .then(() => {
-            res.render("players");
+            res.redirect("players");
         });
 })
 
