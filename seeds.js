@@ -1,4 +1,4 @@
-let Player = require('./api/PlayerApi.js')
+let Player = require('./playerApi.js')
 
 let newPlayers = [
   {
