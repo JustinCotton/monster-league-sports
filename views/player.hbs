@@ -1,1 +1,14 @@
-<h1>{{player.playerName}}</h1>
+<div class="playerProfile">
+    <img src="{{playerPhoto}}" class="playerMugshot">
+    <h1>{{player.playerName}}</h1>
+    <br><br>
+    <h2>Team: {{player.playerStats.cityName}} {{player.playerStats.teamName}}</h2>
+    <br><br>
+    <h2>Stats:</h2>
+    <h3>Hits: {{player.playerStats.hits}}</h3>
+    <h3>Average: {{player.playerStats.average}}</h3>
+    <h3>RBI's: {{player.playerStats.RBIs}}</h3>
+    <h3>HR's: {{player.playerStats.HRs}}</h3>
+    <h3>Steals: {{player.playerStats.steals}}</h3>
+    <h3>Errors: {{player.playerStats.errors}}</h3>
+</div>
