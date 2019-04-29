@@ -8,7 +8,7 @@ app.set("view engine", "hbs");
 
 app.use(express.static(__dirname + '/public'))
 
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended: true}));
 
 app.use(methodOverride("_method"));
 
@@ -35,15 +35,15 @@ app.get("/players/:playerId", (req, res) => {
 
 app.post("/players", (req,res) => {
     playerApi.createPlayer(req.body)
-        .then(() => {
-            res.redirect("players");
+        .then(player => {
+            res.render("spawn", {player});
         });
 })
 
 app.delete("/players/:playerId", (req, res) => {
     playerApi.deletePlayer(req.params.playerId)
         .then(() => {
-            res.redirect("players");
+            res.render("destroy");
         });
 })
 

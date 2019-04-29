@@ -1,9 +1,9 @@
 <div class="playerProfile">
     <img src="{{player.playerPhoto}}" height="150px" class="playerMugshot">
     <h1>{{player.playerName}}</h1>
-    <br><br>
+    
     <h2>Team: {{player.cityName}} {{player.teamName}}</h2>
-    <br><br>
+    
     <h2>Stats:</h2>
     <h3>Hits: {{player.playerStats.hits}}</h3>
     <h3>Average: {{player.playerStats.average}}</h3>
@@ -12,8 +12,7 @@
     <h3>Steals: {{player.playerStats.steals}}</h3>
     <h3>Errors: {{player.playerStats.errors}}</h3>
     <br>
-    <br>
     <form method="POST" action="/players/{{player._id}}?_method=DELETE">
-        <input type="submit" value="Delete Player" />
+        <input type="submit" value="Destroy Player" />
     </form>
 </div>
