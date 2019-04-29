@@ -23,10 +23,15 @@ function getAllPlayers (req,res) {
 }
 
 function createPlayer (newPlayerData) {
-    return PlayerCollection.create(newPlayerData)}
+    return PlayerCollection.create(newPlayerData)
+}
 
 function getPlayerById(playerId) {
     return PlayerCollection.findById(playerId);
+}
+
+function deletePlayer(playerId) {
+    return PlayerCollection.deleteOne({_id: playerId});
 }
 
 let PlayerCollection = mongoose.model("Player", PlayerSchema);
@@ -36,5 +41,6 @@ module.exports = {
     PlayerCollection,
     getAllPlayers,
     createPlayer,
-    getPlayerById
+    getPlayerById,
+    deletePlayer
 }
