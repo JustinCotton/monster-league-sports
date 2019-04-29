@@ -15,4 +15,22 @@
     <form method="POST" action="/players/{{player._id}}?_method=DELETE">
         <input type="submit" value="Destroy Player" />
     </form>
+
+    <form method="POST" action="/players/{{player._id}}?_method=PUT">
+        <input type="text" name="playerName" placeholder="Name" />
+        <input type="text" name="playerPhoto" placeholder="Photo URL" />
+        <input type="text" name="position" placeholder="Position" />
+        <input type="text" name="hits" placeholder="Hits" />
+        <input type="text" name="average" placeholder="Average" />
+        <input type="text" name="rbi" placeholder="RBIs" />
+        <input type="text" name="hr" placeholder="HRs" />
+        <input type="text" name="steals" placeholder="Steals" />
+        <input type="text" name="errors" placeholder="Errors" />
+        <input type="checkbox" name="allStar" placeholder="" />
+        <input type="text" name="cityName" placeholder="City Name" />
+        <input type="text" name="teamName" placeholder="Team Name" />
+        <input type="submit" value="Mutate Player" />
+    </form>
+
+    {{!-- <a href="/players/{{player._id}}/mutate">Mutate Player</a> --}}
 </div>

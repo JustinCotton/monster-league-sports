@@ -47,6 +47,13 @@ app.delete("/players/:playerId", (req, res) => {
         });
 })
 
+app.put("/players/:playerId", (req, res) => {
+    playerApi.editPlayer(req.params.playerId, req.body)
+        .then(player => {
+            res.render("mutate", {player});
+        });
+})
+
 const PORT = process.env.PORT || 3000 
 app.listen(PORT, () => {
     console.log("Connected at: " + PORT);

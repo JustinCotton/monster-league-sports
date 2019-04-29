@@ -34,6 +34,10 @@ function deletePlayer(playerId) {
     return PlayerCollection.deleteOne({_id: playerId});
 }
 
+function editPlayer (playerId, newPlayerData) {
+    return PlayerCollection.findOneAndUpdate({_id: playerId}, newPlayerData, { new: true });
+}
+
 let PlayerCollection = mongoose.model("Player", PlayerSchema);
   
 // export the Player model with module.exports
@@ -42,5 +46,6 @@ module.exports = {
     getAllPlayers,
     createPlayer,
     getPlayerById,
-    deletePlayer
+    deletePlayer,
+    editPlayer
 }
