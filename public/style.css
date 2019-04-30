@@ -3,6 +3,7 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	color: white;
+	text-align: center;
 }
 
 a {
@@ -14,10 +15,15 @@ img {
 	border-radius: 20px;
 }
 
+ul {
+	margin: 0 auto;
+	text-align: center;
+}
+
 li {
 	display: inline-block;
 	list-style: none;
-	margin: 40px;
+	margin: 20px 10px;
 }
 
 nav a {
@@ -28,6 +34,7 @@ nav a {
 input {
 	height: 30px;
 	border-radius: 10px;
+	margin: 5px
 }
 
 h1 {
@@ -35,4 +42,13 @@ h1 {
 	font-size: 60px;
 	margin: 0 auto;
 	color: lime;
+}
+
+.profile {
+	background-color: rgba(0,0,0,0.6);
+	width: 60%;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 40px;
+	padding: 10px;
 }

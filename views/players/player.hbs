@@ -1,6 +1,6 @@
-<div class="playerProfile">
+<div class="profile">
     <img src="{{player.playerPhoto}}" height="150px" class="playerMugshot">
-    <h1>{{player.playerName}}</h1>
+    <h2>{{player.playerName}}</h2>
     
     <h2>Team: {{player.cityName}} {{player.teamName}}</h2>
     
@@ -26,7 +26,6 @@
         <input type="text" name="playerStats.HRs" placeholder="HRs" />
         <input type="text" name="playerStats.steals" placeholder="Steals" />
         <input type="text" name="playerStats.errors" placeholder="Errors" />
-        <input type="checkbox" name="allStar" placeholder="" />
         <input type="text" name="cityName" placeholder="City Name" />
         <input type="text" name="teamName" placeholder="Team Name" />
         <input type="submit" value="Mutate Player" />

@@ -1,26 +1,28 @@
-<h1>Cities</h1>
-<ul>
-    {{#each cities}}
-        <li>
-            <a href="/cities/{{_id}}">
-            <img src="{{cityPhoto}}" height="150px"><br>
-            {{cityName}}<br>
-            </a>
-        </li>
-    {{/each}}
-</ul>
+<div class="profile">
+    <h1>Cities</h1>
+    <ul>
+        {{#each cities}}
+            <li>
+                <a href="/cities/{{_id}}">
+                <img src="{{cityPhoto}}" height="150px"><br>
+                {{cityName}}<br>
+                </a>
+            </li>
+        {{/each}}
+    </ul>
 
-<form method="POST" action="/cities">
-    <input type="text" name="cityName" placeholder="Name" />
-        <input type="text" name="cityPhoto" placeholder="Photo URL" />
-        <input type="text" name="citySlogan" placeholder="Slogan" />
-        <input type="text" name="cityStats.population" placeholder="Population" />
-        <input type="text" name="cityStats.terrain" placeholder="Terrain" />
-        <input type="text" name="cityStats.averageTemp" placeholder="Average Temperature" />
-        <input type="text" name="cityStats.dailyHoursOfDarkness" placeholder="Daily Hours of Darkness" />
-        <input type="text" name="cityStats.localDelicacy" placeholder="Local Delicacy" />
-        <input type="text" name="cityStats.localBrewery" placeholder="Local Brewery" />
-        <input type="text" name="cityStats.localAttraction" placeholder="Local Attraction" />
-        <input type="submit" value="Spawn City" />
+    <form method="POST" action="/cities">
+        <input type="text" name="cityName" placeholder="Name" />
+            <input type="text" name="cityPhoto" placeholder="Photo URL" />
+            <input type="text" name="citySlogan" placeholder="Slogan" />
+            <input type="text" name="cityStats.population" placeholder="Population" />
+            <input type="text" name="cityStats.terrain" placeholder="Terrain" />
+            <input type="text" name="cityStats.averageTemp" placeholder="Average Temperature" />
+            <input type="text" name="cityStats.dailyHoursOfDarkness" placeholder="Daily Hours of Darkness" />
+            <input type="text" name="cityStats.localDelicacy" placeholder="Local Delicacy" />
+            <input type="text" name="cityStats.localBrewery" placeholder="Local Brewery" />
+            <input type="text" name="cityStats.localAttraction" placeholder="Local Attraction" />
+            <input type="submit" value="Spawn City" />
+        </form>
     </form>
-</form>
+</div>

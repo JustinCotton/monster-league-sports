@@ -1,27 +1,28 @@
-<h1>Players</h1>
-<ul>
-    {{#each players}}
-        <li>
-            <a href="/players/{{_id}}">
-            <img src="{{playerPhoto}}" height="150px"><br>
-            {{playerName}}            
-            </a>
-        </li>
-    {{/each}}
-</ul>
+<div class="profile">
+    <h1>Players</h1>
+    <ul>
+        {{#each players}}
+            <li>
+                <a href="/players/{{_id}}">
+                <img src="{{playerPhoto}}" height="150px"><br>
+                {{playerName}}            
+                </a>
+            </li>
+        {{/each}}
+    </ul>
 
-<form method="POST" action="/players">
-    <input type="text" name="playerName" placeholder="Name" />
-    <input type="text" name="playerPhoto" placeholder="Photo URL" />
-    <input type="text" name="position" placeholder="Position" />
-    <input type="text" name="playerStats.hits" placeholder="Hits" />
-    <input type="text" name="playerStats.average" placeholder="Average" />
-    <input type="text" name="playerStats.RBIs" placeholder="RBIs" />
-    <input type="text" name="playerStats.HRs" placeholder="HRs" />
-    <input type="text" name="playerStats.steals" placeholder="Steals" />
-    <input type="text" name="playerStats.errors" placeholder="Errors" />
-    <input type="checkbox" name="allStar" placeholder="" />
-    <input type="text" name="cityName" placeholder="City Name" />
-    <input type="text" name="teamName" placeholder="Team Name" />
-    <input type="submit" value="Create New Player" />
-</form>
+    <form method="POST" action="/players">
+        <input type="text" name="playerName" placeholder="Name" />
+        <input type="text" name="playerPhoto" placeholder="Photo URL" />
+        <input type="text" name="position" placeholder="Position" />
+        <input type="text" name="playerStats.hits" placeholder="Hits" />
+        <input type="text" name="playerStats.average" placeholder="Average" />
+        <input type="text" name="playerStats.RBIs" placeholder="RBIs" />
+        <input type="text" name="playerStats.HRs" placeholder="HRs" />
+        <input type="text" name="playerStats.steals" placeholder="Steals" />
+        <input type="text" name="playerStats.errors" placeholder="Errors" />
+        <input type="text" name="cityName" placeholder="City Name" />
+        <input type="text" name="teamName" placeholder="Team Name" />
+        <input type="submit" value="Create New Player" />
+    </form>
+</h1>
