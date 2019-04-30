@@ -1,0 +1,22 @@
+<h1>Teams</h1>
+<ul>
+    {{#each teams}}
+        <li>
+            <a href="/teams/{{_id}}">
+            <img src="{{teamLogo}}" height="150px"><br>
+            {{cityName}} {{teamName}}            
+            </a>
+        </li>
+    {{/each}}
+</ul>
+
+<form method="POST" action="/players">
+    <input type="text" name="cityName" placeholder="City Name" />
+    <input type="text" name="teamName" placeholder="Team Name" />
+    <input type="text" name="teamLogo" placeholder="Logo URL" />
+    <input type="text" name="teamStats.wins" placeholder="Wins" />
+    <input type="text" name="teamStats.losses" placeholder="Losses" />
+    <input type="text" name="teamStats.championships" placeholder="Championships" />
+    <input type="text" name="stadium" placeholder="Stadium" />
+    <input type="submit" value="Spawn Team" />
+</form>

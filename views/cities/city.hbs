@@ -1,0 +1,35 @@
+<div class="cityProfile">
+    <img src="{{city.cityPhoto}}" height="150px" class="citySnapshot">
+    <h1>{{city.cityName}}</h1>
+    <h2>{{city.citySlogan}}</h2>
+    
+    {{!-- <h2>Teams: {{player.cityName}} {{player.teamName}}</h2> --}}
+    
+    <h2>Stats:</h2>
+    <h3>Population: {{city.cityStats.population}}</h3>
+    <h3>Terrain: {{city.cityStats.terrain}}</h3>
+    <h3>Average Temperature: {{city.cityStats.averageTemp}}</h3>
+    <h3>Daily Hours of Darkness: {{city.cityStats.dailyHoursOfDarkness}}</h3>
+    <h3>Local Delicacy: {{city.cityStats.localDelicacy}}</h3>
+    <h3>Local Brewery: {{city.cityStats.localBrewery}}</h3>
+    <h3>Local Attraction: {{city.cityStats.localAttraction}}</h3>
+    <br>
+    <form method="POST" action="/cities/{{city._id}}?_method=DELETE">
+        <input type="submit" value="Destroy City" />
+    </form>
+
+    <form method="POST" action="/cities/{{city._id}}?_method=PUT">
+        <input type="text" name="cityName" placeholder="Name" />
+        <input type="text" name="cityPhoto" placeholder="Photo URL" />
+        <input type="text" name="citySlogan" placeholder="Slogan" />
+        <input type="text" name="cityStats.population" placeholder="Population" />
+        <input type="text" name="cityStats.terrain" placeholder="Terrain" />
+        <input type="text" name="cityStats.averageTemp" placeholder="Average Temperature" />
+        <input type="text" name="cityStats.dailyHoursOfDarkness" placeholder="Daily Hours of Darkness" />
+        <input type="text" name="cityStats.localDelicacy" placeholder="Local Delicacy" />
+        <input type="text" name="cityStats.localBrewery" placeholder="Local Brewery" />
+        <input type="text" name="cityStats.localAttraction" placeholder="Local Attraction" />
+        <input type="submit" value="Mutate City" />
+    </form>
+
+</div>

@@ -1,11 +1,12 @@
 const mongoose = require('./connection.js');
 
-// defines structure of player entity
+
+// defines structure of team entity
 const TeamSchema = new mongoose.Schema({
     cityName: String,
     teamName: String,
     teamLogo: String,
-    players: [PlayerSchema],
+    // players: [PlayerSchema],
     teamStats: {
         wins: Number,
         losses: Number,
@@ -15,34 +16,34 @@ const TeamSchema = new mongoose.Schema({
     inPlayoffPosition: Boolean
 });
 
-function getAllPlayers (req,res) {
-    return PlayerCollection.find();
+function getAllTeams (req,res) {
+    return TeamCollection.find();
 }
 
-function createPlayer (newPlayerData) {
-    return PlayerCollection.create(newPlayerData)
+function createTeam (newTeamData) {
+    return TeamCollection.create(newTeamData)
 }
 
-function getPlayerById(playerId) {
-    return PlayerCollection.findById(playerId);
+function getTeamById(teamId) {
+    return TeamCollection.findById(teamId);
 }
 
-function deletePlayer(playerId) {
-    return PlayerCollection.deleteOne({_id: playerId});
+function deleteTeam(teamId) {
+    return TeamCollection.deleteOne({_id: teamId});
 }
 
-function editPlayer (playerId, newPlayerData) {
-    return PlayerCollection.findOneAndUpdate({_id: playerId}, newPlayerData, { new: true });
+function editTeam (teamId, newTeamData) {
+    return TeamCollection.findOneAndUpdate({_id: teamId}, newTeamData, { new: true });
 }
 
-let PlayerCollection = mongoose.model("Team", TeamSchema);
+let TeamCollection = mongoose.model("Team", TeamSchema);
   
-// export the Player model with module.exports
+// export the Team model with module.exports
 module.exports = {
-    PlayerCollection,
-    getAllPlayers,
-    createPlayer,
-    getPlayerById,
-    deletePlayer,
-    editPlayer
+    TeamCollection,
+    getAllTeams,
+    createTeam,
+    getTeamById,
+    deleteTeam,
+    editTeam
 }
