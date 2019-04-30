@@ -288,7 +288,7 @@ let newCities = [
         dailyHoursOfDarkness: 15,
         localDelicacy: "Bones for Gnawing",
         localBrewery: "Ogre's Fine Lagers",
-        localAttraction: "Slime Springs Park"
+        localAttraction: "The Famous Bone Bread Bakery"
     },
     teams: [
       "Monsterton Mashers"
@@ -366,7 +366,7 @@ let newCities = [
   {
     cityName: "Hell",
     cityPhoto: "https://geekandsundry.com/wp-content/uploads/2017/04/CR-FI-970x545.png",
-    citySlogan: "Yes, you are literally in Hell!",
+    citySlogan: "Hot Time in the Old Town, Tonight!",
     cityStats: {
         population: 1000000000001,
         terrain: "Volcanic",
