@@ -28,18 +28,25 @@ li {
 
 nav a {
 	display: inline-block;
-	margin: 30px;
 }
 
 input {
 	height: 30px;
 	border-radius: 10px;
-	margin: 5px
+	margin: 5px;
 }
 
-h1 {
+nav h1, .midlink {
 	font-family: 'Creepster', cursive;
 	font-size: 60px;
+	margin: 0 auto;
+	color: lime;
+}
+
+nav h2 {
+	font-size: 20px;
+	margin: 0, 20px;
+	font-family: 'Nosifer', cursive;
 	margin: 0 auto;
 	color: lime;
 }
@@ -51,4 +58,19 @@ h1 {
 	margin: 0 auto;
 	border-radius: 40px;
 	padding: 10px;
+}
+
+.superlink {
+	font-size: 40px;
+	margin: 10px, 10px, 0;
+}
+
+.sublink {
+	font-size: 30px;
+	margin: 30px;
+}
+
+.profile {
+	font-family: 'Voltaire', sans-serif;
+	font-size: 30px;
 }
