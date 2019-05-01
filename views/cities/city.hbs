@@ -3,8 +3,6 @@
     <h2>{{city.cityName}}</h2>
     <h3 style="font-style: italic">{{city.citySlogan}}</h3>
     
-    {{!-- <h2>Teams: {{player.cityName}} {{player.teamName}}</h2> --}}
-    
     <h3>Population: {{city.cityStats.population}}</h3>
     <h3>Terrain: {{city.cityStats.terrain}}</h3>
     <h3>Average Temperature: {{city.cityStats.averageTemp}}</h3>
@@ -12,6 +10,15 @@
     <h3>Local Delicacy: {{city.cityStats.localDelicacy}}</h3>
     <h3>Local Brewery: {{city.cityStats.localBrewery}}</h3>
     <h3>Local Attraction: {{city.cityStats.localAttraction}}</h3>
+    <h3>Players:</h3>
+    {{#each players}}
+        <li>
+            <a href="/players/{{_id}}">
+            <img src="{{playerPhoto}}" height="150px"><br>
+            {{playerName}}
+            </a>
+        </li>
+    {{/each}}
     <br>
     <form method="POST" action="/cities/{{city._id}}?_method=DELETE">
         <input type="submit" value="Destroy City" class="destroy"/>

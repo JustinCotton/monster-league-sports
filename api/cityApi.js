@@ -1,7 +1,10 @@
 const mongoose = require('./connection.js');
+const PlayerCollection = require("./playerApi.js");
+const TeamCollection = require("./teamApi.js");
 
 // defines structure of city entity
-const CitySchema = mongoose.Schema({
+const Schema = mongoose.Schema;
+const CitySchema = new Schema({
     cityName: String,
     cityPhoto: String,
     citySlogan: String,
@@ -14,8 +17,8 @@ const CitySchema = mongoose.Schema({
         localBrewery: String,
         localAttraction: String
     },
-    // players: [PlayerSchema],
-    // teams: [TeamSchema],
+    players:[{type:Schema.Types.ObjectId,ref:PlayerCollection}],
+    teams:[{type:Schema.Types.ObjectId,ref:TeamCollection}],
     // stadiums: [TeamSchema.stadium]
 });
 

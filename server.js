@@ -111,10 +111,22 @@ app.get("/cities", (req, res) => {
         });
 });
 
+// app.get("/cities/:cityId", (req, res) => {
+//     cityApi.getCityById(req.params.cityId)
+//         .then(city => {
+//             res.render("cities/city", {city});
+//         });
+// })
+
 app.get("/cities/:cityId", (req, res) => {
     cityApi.getCityById(req.params.cityId)
         .then(city => {
-            res.render("cities/city", {city});
+            console.log(city)
+            playerApi.getPlayersByCity(city.cityName)
+                .then(players => {
+                    console.log(players)
+                    res.render("cities/city", {city, players});
+                });  
         });
 })
 
