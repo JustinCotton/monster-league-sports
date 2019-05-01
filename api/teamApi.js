@@ -1,5 +1,5 @@
 const mongoose = require('./connection.js');
-
+const Player = require("./playerApi.js");
 
 // defines structure of team entity
 const TeamSchema = new mongoose.Schema({
@@ -28,6 +28,14 @@ function getTeamById(teamId) {
     return TeamCollection.findById(teamId);
 }
 
+// function getPlayersByTeam2(cityName, teamName) {
+//     return Player.find(cityName, teamName);
+// }
+
+function getPlayersByTeam(req, res) {
+    return Player.find({cityName: req.body.cityName}, {teamName: req.body.teamName});
+}
+
 function deleteTeam(teamId) {
     return TeamCollection.deleteOne({_id: teamId});
 }
@@ -44,6 +52,8 @@ module.exports = {
     getAllTeams,
     createTeam,
     getTeamById,
+    getPlayersByTeam,
+    // getPlayersByTeam2,
     deleteTeam,
     editTeam
 }

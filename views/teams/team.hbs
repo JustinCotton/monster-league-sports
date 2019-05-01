@@ -4,13 +4,22 @@
     
     <h2>{{team.cityName}} {{team.teamName}}</h2>
         
-    {{!-- <h2>Stats:</h2> --}}
     <h3>Wins: {{team.teamStats.wins}}</h3>
     <h3>Losses: {{team.teamStats.losses}}</h3>
     <h3>Championships: {{team.teamStats.championships}}</h3>
     <h3>Stadium: {{team.stadium}}</h3>
     <h3>Players</h3>
     {{!-- {{#each team.players}}
+        {{#if (team.players.cityName == team.cityName) && (team.players.teamName == team.teamName)}}
+        <li>
+            <a href="/players/{{_id}}">
+            <img src="{{playerPhoto}}" height="150px"><br>
+            {{playerName}}
+            </a>
+        </li>
+        {{/if}}
+    {{/each}} --}}
+    {{!-- {{#each players}}
         <li>
             <a href="/players/{{_id}}">
             <img src="{{playerPhoto}}" height="150px"><br>
@@ -20,7 +29,7 @@
     {{/each}} --}}
     <br>
     <form method="POST" action="/teams/{{team._id}}?_method=DELETE">
-        <input type="submit" value="Destroy Team" />
+        <input type="submit" value="Destroy Team" class="destroy"/>
     </form>
 
     <form method="POST" action="/teams/{{team._id}}?_method=PUT">
@@ -31,7 +40,7 @@
         <input type="text" name="teamStats.losses" placeholder="Losses" />
         <input type="text" name="teamStats.championships" placeholder="Championships" />
         <input type="text" name="stadium" placeholder="Stadium" />
-        <input type="submit" value="Mutate Team" />
+        <input type="submit" value="Mutate Team" class="mutate"/>
     </form>
 
 </div>

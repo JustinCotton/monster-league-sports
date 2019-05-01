@@ -1,11 +1,10 @@
 <div class="profile">
-    <img src="{{city.cityPhoto}}" height="150px" class="citySnapshot">
+    <img src="{{city.cityPhoto}}" height="200px" class="citySnapshot">
     <h2>{{city.cityName}}</h2>
     <h3 style="font-style: italic">{{city.citySlogan}}</h3>
     
     {{!-- <h2>Teams: {{player.cityName}} {{player.teamName}}</h2> --}}
     
-    {{!-- <h2>Stats:</h2> --}}
     <h3>Population: {{city.cityStats.population}}</h3>
     <h3>Terrain: {{city.cityStats.terrain}}</h3>
     <h3>Average Temperature: {{city.cityStats.averageTemp}}</h3>
@@ -15,7 +14,7 @@
     <h3>Local Attraction: {{city.cityStats.localAttraction}}</h3>
     <br>
     <form method="POST" action="/cities/{{city._id}}?_method=DELETE">
-        <input type="submit" value="Destroy City" />
+        <input type="submit" value="Destroy City" class="destroy"/>
     </form>
 
     <form method="POST" action="/cities/{{city._id}}?_method=PUT">
@@ -28,8 +27,8 @@
         <input type="text" name="cityStats.dailyHoursOfDarkness" placeholder="Daily Hours of Darkness" />
         <input type="text" name="cityStats.localDelicacy" placeholder="Local Delicacy" />
         <input type="text" name="cityStats.localBrewery" placeholder="Local Brewery" />
-        <input type="text" name="cityStats.localAttraction" placeholder="Local Attraction" />
-        <input type="submit" value="Mutate City" />
+        <input type="text" name="cityStats.localAttraction" placeholder="Local Attraction" /><br>
+        <input type="submit" value="Mutate City" class="mutate"/>
     </form>
 
 </div>

@@ -65,7 +65,11 @@ app.put("/players/:playerId", (req, res) => {
 app.get("/teams", (req, res) => {
     teamApi.getAllTeams()
         .then(teams => {
-            res.render("teams/teams", {teams});
+            // teamApi.getPlayersByTeam()
+            //     .then(players => {
+                    res.render("teams/teams", {teams});
+                    // res.render("teams/teams", {teams}, {players});
+                // });            
         });
 });
 
