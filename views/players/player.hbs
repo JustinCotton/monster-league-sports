@@ -17,17 +17,17 @@
     </form>
 
     <form method="POST" action="/players/{{player._id}}?_method=PUT">
-        <input type="text" name="playerName" placeholder="Name" />
-        <input type="text" name="playerPhoto" placeholder="Photo URL" />
-        <input type="text" name="position" placeholder="Position" />
-        <input type="text" name="playerStats.hits" placeholder="Hits" />
-        <input type="text" name="playerStats.average" placeholder="Average" />
-        <input type="text" name="playerStats.RBIs" placeholder="RBIs" />
-        <input type="text" name="playerStats.HRs" placeholder="HRs" />
-        <input type="text" name="playerStats.steals" placeholder="Steals" />
-        <input type="text" name="playerStats.errors" placeholder="Errors" />
-        <input type="text" name="cityName" placeholder="City Name" />
-        <input type="text" name="teamName" placeholder="Team Name" />
+        <input type="text" name="playerName" value="{{player.playerName}}" placeholder="Name" />
+        <input type="text" name="playerPhoto" value="{{player.playerPhoto}}" placeholder="Photo URL"/>
+        <input type="text" name="position" value="{{player.position}}" placeholder="Position"/>
+        <input type="text" name="playerStats.hits" value="{{player.playerStats.hits}}" placeholder="Hits"/>
+        <input type="text" name="playerStats.average" value="{{player.playerStats.average}}" placeholder="Average"/>
+        <input type="text" name="playerStats.RBIs" value="{{player.playerStats.RBIs}}" placeholder="RBIs"/>
+        <input type="text" name="playerStats.HRs" value="{{player.playerStats.HRs}}" placeholder="HRs"/>
+        <input type="text" name="playerStats.steals" value="{{player.playerStats.steals}}" placeholder="Steals"/>
+        <input type="text" name="playerStats.errors" value="{{player.playerStats.errors}}" placeholder="Errors"/>
+        <input type="text" name="cityName" value="{{player.cityName}}" placeholder="City Name"/>
+        <input type="text" name="teamName" value="{{player.teamName}}" placeholder="Team Name"/>
         <input type="submit" value="Mutate Player" class="mutate"/>
     </form>
 

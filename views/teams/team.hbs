@@ -33,13 +33,13 @@
     </form>
 
     <form method="POST" action="/teams/{{team._id}}?_method=PUT">
-        <input type="text" name="cityName" placeholder="City Name" />
-        <input type="text" name="teamName" placeholder="Team Name" />
-        <input type="text" name="teamLogo" placeholder="Logo URL" />
-        <input type="text" name="teamStats.wins" placeholder="Wins" />
-        <input type="text" name="teamStats.losses" placeholder="Losses" />
-        <input type="text" name="teamStats.championships" placeholder="Championships" />
-        <input type="text" name="stadium" placeholder="Stadium" />
+        <input type="text" name="cityName" value="{{team.cityName}}" placeholder="City Name" />
+        <input type="text" name="teamName" value="{{team.teamName}}" placeholder="Team Name" />
+        <input type="text" name="teamLogo" value="{{team.teamLogo}}" placeholder="Logo URL" />
+        <input type="text" name="teamStats.wins" value="{{team.teamStats.wins}}" placeholder="Wins" />
+        <input type="text" name="teamStats.losses" value="{{team.teamStats.losses}}" placeholder="Losses" />
+        <input type="text" name="teamStats.championships" value="{{team.teamStats.championships}}" placeholder="Championships" />
+        <input type="text" name="stadium" value="{{team.stadium}}" placeholder="Stadium" />
         <input type="submit" value="Mutate Team" class="mutate"/>
     </form>
 

@@ -18,16 +18,16 @@
     </form>
 
     <form method="POST" action="/cities/{{city._id}}?_method=PUT">
-        <input type="text" name="cityName" placeholder="Name" />
-        <input type="text" name="cityPhoto" placeholder="Photo URL" />
-        <input type="text" name="citySlogan" placeholder="Slogan" />
-        <input type="text" name="cityStats.population" placeholder="Population" />
-        <input type="text" name="cityStats.terrain" placeholder="Terrain" />
-        <input type="text" name="cityStats.averageTemp" placeholder="Average Temperature" />
-        <input type="text" name="cityStats.dailyHoursOfDarkness" placeholder="Daily Hours of Darkness" />
-        <input type="text" name="cityStats.localDelicacy" placeholder="Local Delicacy" />
-        <input type="text" name="cityStats.localBrewery" placeholder="Local Brewery" />
-        <input type="text" name="cityStats.localAttraction" placeholder="Local Attraction" /><br>
+        <input type="text" name="cityName" value="{{city.cityName}}" placeholder="Name" />
+        <input type="text" name="cityPhoto" value="{{city.cityPhoto}}" placeholder="Photo URL" />
+        <input type="text" name="citySlogan" value="{{city.citySlogan}}" placeholder="Slogan" />
+        <input type="text" name="cityStats.population" value="{{city.cityStats.population}}" placeholder="Population" />
+        <input type="text" name="cityStats.terrain" value="{{city.cityStats.terrain}}" placeholder="Terrain" />
+        <input type="text" name="cityStats.averageTemp" value="{{city.cityStats.averageTemp}}" placeholder="Average Temperature" />
+        <input type="text" name="cityStats.dailyHoursOfDarkness" value="{{city.cityStats.dailyHoursOfDarkness}}" placeholder="Daily Hours of Darkness" />
+        <input type="text" name="cityStats.localDelicacy" value="{{city.cityStats.localDelicacy}}" placeholder="Local Delicacy" />
+        <input type="text" name="cityStats.localBrewery" value="{{city.cityStats.localBrewery}}" placeholder="Local Brewery" />
+        <input type="text" name="cityStats.localAttraction" value="{{city.cityStats.localAttraction}}" placeholder="Local Attraction" /><br>
         <input type="submit" value="Mutate City" class="mutate"/>
     </form>
 
