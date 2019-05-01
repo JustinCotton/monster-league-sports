@@ -8,7 +8,7 @@
     <h3>Losses: {{team.teamStats.losses}}</h3>
     <h3>Championships: {{team.teamStats.championships}}</h3>
     <h3>Stadium: {{team.stadium}}</h3>
-    <h3>Players</h3>
+    <h3>Players:</h3>
     {{!-- {{#each team.players}}
         {{#if (team.players.cityName == team.cityName) && (team.players.teamName == team.teamName)}}
         <li>
@@ -19,14 +19,14 @@
         </li>
         {{/if}}
     {{/each}} --}}
-    {{!-- {{#each players}}
+    {{#each players}}
         <li>
             <a href="/players/{{_id}}">
             <img src="{{playerPhoto}}" height="150px"><br>
             {{playerName}}
             </a>
         </li>
-    {{/each}} --}}
+    {{/each}}
     <br>
     <form method="POST" action="/teams/{{team._id}}?_method=DELETE">
         <input type="submit" value="Destroy Team" class="destroy"/>

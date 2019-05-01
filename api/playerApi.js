@@ -30,6 +30,14 @@ function getPlayerById(playerId) {
     return PlayerCollection.findById(playerId);
 }
 
+function getPlayersByTeam(city, team) {
+    return PlayerCollection.find({cityName: city, teamName: team});
+}
+
+// function getPlayersByTeam2(req, res) {
+//     return Player.find({cityName: req.body.cityName}, {teamName: req.body.teamName});
+// }
+
 function deletePlayer(playerId) {
     return PlayerCollection.deleteOne({_id: playerId});
 }
@@ -46,6 +54,7 @@ module.exports = {
     getAllPlayers,
     createPlayer,
     getPlayerById,
+    getPlayersByTeam,
     deletePlayer,
     editPlayer
 }

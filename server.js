@@ -64,19 +64,20 @@ app.put("/players/:playerId", (req, res) => {
 
 app.get("/teams", (req, res) => {
     teamApi.getAllTeams()
-        .then(teams => {
-            // teamApi.getPlayersByTeam()
-            //     .then(players => {
-                    res.render("teams/teams", {teams});
-                    // res.render("teams/teams", {teams}, {players});
-                // });            
+        .then(teams => {            
+            res.render("teams/teams", {teams});          
         });
 });
 
 app.get("/teams/:teamId", (req, res) => {
     teamApi.getTeamById(req.params.teamId)
         .then(team => {
-            res.render("teams/team", {team});
+            console.log(team)
+            playerApi.getPlayersByTeam(team.cityName, team.teamName)
+                .then(players => {
+                    console.log(players)
+                    res.render("teams/team", {team, players});
+                });  
         });
 })
 
