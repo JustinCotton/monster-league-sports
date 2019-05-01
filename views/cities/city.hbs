@@ -10,6 +10,15 @@
     <h3>Local Delicacy: {{city.cityStats.localDelicacy}}</h3>
     <h3>Local Brewery: {{city.cityStats.localBrewery}}</h3>
     <h3>Local Attraction: {{city.cityStats.localAttraction}}</h3>
+    <h3>Teams:</h3>
+    {{#each teams}}
+        <li>
+            <a href="/teams/{{_id}}">
+            <img src="{{teamLogo}}" height="150px"><br>
+            {{teamName}}
+            </a>
+        </li>
+    {{/each}}<br>
     <h3>Players:</h3>
     {{#each players}}
         <li>

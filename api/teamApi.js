@@ -29,6 +29,10 @@ function getTeamById(teamId) {
     return TeamCollection.findById(teamId);
 }
 
+function getTeamsByCity(city) {
+    return TeamCollection.find({cityName: city});
+}
+
 function deleteTeam(teamId) {
     return TeamCollection.deleteOne({_id: teamId});
 }
@@ -36,7 +40,6 @@ function deleteTeam(teamId) {
 function editTeam (teamId, newTeamData) {
     return TeamCollection.findOneAndUpdate({_id: teamId}, newTeamData, { new: true });
 }
-
 
 let TeamCollection = mongoose.model("Team", TeamSchema);
   
@@ -46,6 +49,7 @@ module.exports = {
     getAllTeams,
     createTeam,
     getTeamById,
+    getTeamsByCity,
     deleteTeam,
     editTeam
 }
