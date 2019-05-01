@@ -19,7 +19,6 @@ const CitySchema = new Schema({
     },
     players:[{type:Schema.Types.ObjectId,ref:PlayerCollection}],
     teams:[{type:Schema.Types.ObjectId,ref:TeamCollection}],
-    // stadiums: [TeamSchema.stadium]
 });
 
 function getAllCities (req,res) {
