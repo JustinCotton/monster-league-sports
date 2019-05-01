@@ -1,4 +1,4 @@
-# Monster League Sports
+# Monster League Baseball
 ## Overview
 
 
@@ -7,7 +7,7 @@
 
 ## Technologies Used
 
-  * Languages: nodeJS, Express, Handlebars
+  * Languages: nodeJS, Express, Handlebars, CSS, Javascript
   * Design: Google Fonts
   * Project Planning & User Stories: [Trello](https://trello.com/b/mpoAg0Q5/sei21-monser-league-sports)
   * Visual Studio Code
