@@ -118,7 +118,6 @@ app.get("/cities/:cityId", (req, res) => {
                 .then(players => {
                     teamApi.getTeamsByCity(city.cityName)
                         .then(teams => {
-                            console.log(teams);
                             res.render("cities/city", {city, players, teams});
                         });
                 });  
