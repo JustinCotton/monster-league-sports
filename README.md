@@ -7,11 +7,12 @@ Monster sports database application built with Express, MongoDB, Mongoose, and H
 
 **Live site:** <https://monster-league-baseball.herokuapp.com/>
 
+**Project Planning:** [Trello](https://trello.com/b/mpoAg0Q5/sei21-monster-league-sports)
+
 ## Technologies Used
 
   * Languages: nodeJS, Express, Handlebars, CSS, Javascript
   * Design: Google Fonts
-  * Project Planning & User Stories: [Trello](https://trello.com/b/mpoAg0Q5/sei21-monser-league-sports)
   * Visual Studio Code
   * Git, Github, MongoDB, MongoDB Compass, Postman, Heroku
 
