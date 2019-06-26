@@ -1,7 +1,7 @@
 # Monster League Baseball
 ## Overview
 
-Monster sports database application built with Express, MongoDB, Mongoose, and Handlebars, and deployed on Heroku
+Monster sports database application built with Express, MongoDB, Mongoose, and Handlebars, and deployed on Heroku.
 
 ![Screenshot](https://github.com/JustinCotton/monster-league-sports/blob/master/MonsterScreenshot.JPG)
 
