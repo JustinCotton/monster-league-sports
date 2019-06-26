@@ -11,15 +11,15 @@ Monster sports database application built with Express, MongoDB, Mongoose, and H
 
 ## Technologies Used
 
-  * Languages: Javascript
+  * Languages: JavaScript
   * Server-side Tools: Express.js, Handlebars.js
-  * Development Tools: Node.js
   * Database Tools: MongoDB, MongoDB Compass
+  * Development Tools: Node.js
   * API Development: Postman
   * Version Control: Git, GitHub
-  * Design: Google Fonts
-  * Text Editor: Visual Studio Code
   * Cloud Deployment: Heroku
+  * Text Editor: Visual Studio Code
+  * Design: Google Fonts
 
 
 ## Features
