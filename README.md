@@ -1,9 +1,11 @@
 # Monster League Baseball
 ## Overview
 
+Create and destroy monster athletes, teams, and cities with this full-stack application built with Express, MongoDB, Mongoose, and Handlebars, and deployed on Heroku
 
+![Screenshot](https://github.com/JustinCotton/monster-league-sports/blob/master/MonsterScreenshot.JPG)
 
-**Live site:** <https://enigmatic-dawn-85886.herokuapp.com/>
+**Live site:** <https://monster-league-baseball.herokuapp.com/>
 
 ## Technologies Used
 
